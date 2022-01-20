@@ -1,0 +1,41 @@
+*
+{
+    text-align: center;
+}
+
+.hero-image 
+{
+    background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, 0.5)), url('../images/snowboardShot.jpg'); 
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text
+{
+    color: white; 
+    font-family: monospace;
+    font-size: 35px;
+}
+
+.parallax
+{
+    background-image: url('../images/snowboard2.jpg');
+    min-height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.info-box 
+{
+    background-color: lightgrey;
+}
+
+.info-box2 
+{
+    background-color: lightgreen;
+}
