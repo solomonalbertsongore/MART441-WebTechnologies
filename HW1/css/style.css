@@ -3,6 +3,16 @@
     text-align: center;
 }
 
+body 
+{
+    background-image: url('../images/snowboard2.jpg');
+    background-attachment: fixed;
+    min-height: 200px;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
 .hero-image 
 {
     background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, 0.5)), url('../images/snowboardShot.jpg'); 
@@ -11,6 +21,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    max-width: 100%;
+    display: block;
 }
 
 .hero-text
@@ -22,7 +34,7 @@
 
 .parallax
 {
-    background-image: url('../images/snowboard2.jpg');
+    /* background-image: url('../images/snowboard2.jpg'); */
     min-height: 200px;
     background-attachment: fixed;
     background-position: center;
@@ -32,10 +44,45 @@
 
 .info-box 
 {
-    background-color: lightgrey;
+    color: white; 
+    font-family: monospace;
+    font-size: 20px;
+    background:rgba(172, 172, 172, 0.7);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 75%;
+    margin: auto;
+    /* Adds a horizontal scroll bar to view content when it goes off screen 
+    overflow-x: auto; 
+    */
 }
 
-.info-box2 
+@media (max-width: 850px)
 {
-    background-color: lightgreen;
+    .info-box
+    {
+        font-size: 13px;
+    }
+
+    .hero-text
+    {
+        font-size: 30px;
+    }
 }
+
+@media (max-width: 500px)
+{
+    .info-box
+    {
+        font-size: 11px;
+    }
+
+    .hero-text
+    {
+        font-size: 25px;
+    }
+}
+
+
+
