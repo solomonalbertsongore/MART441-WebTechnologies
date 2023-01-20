@@ -97,6 +97,29 @@ position: relative;
     padding: 25px;
 }
 
+.list-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px; 
+
+    position: absolute;
+    top: 25%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+
+.list-text
+{
+    text-align: center;
+    color: white;
+    width: 50%;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 25px;
+    padding-top: 5px;
+}
+
 
 
 @media (min-width: 350px)
