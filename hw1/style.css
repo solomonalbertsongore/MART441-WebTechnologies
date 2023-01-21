@@ -146,7 +146,7 @@ position: relative;
     
     .paralax1
     {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/hw1/images/me-small.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../hw1/images/me-small.jpg");
         height: 100%; 
         background-attachment: fixed;
         background-position: center; 
@@ -160,7 +160,7 @@ position: relative;
 {
     .paralax1
     {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/hw1/images/me.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../hw1/images/me.jpg");
     }
 
     .hero-title
