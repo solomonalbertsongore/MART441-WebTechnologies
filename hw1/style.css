@@ -155,3 +155,31 @@ position: relative;
         position: relative; 
     }
 }
+
+@media (min-width: 800px) 
+{
+    .paralax1
+    {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/hw1/images/me.jpg");
+    }
+
+    .hero-title
+    {
+        font-size: 25px;
+    }
+
+    .breaker-title
+    {
+        font-size: 23px;
+    }
+
+    .list-text
+    {
+        font-size: 23px;
+    }
+
+    .hero-text
+    {
+        font-size: 23px;
+    }
+}
