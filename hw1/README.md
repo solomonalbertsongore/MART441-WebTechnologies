@@ -6,4 +6,8 @@ I enjoyed learning about paralax scrolling and hero images, very useful tools fo
 - https://web.dev/learn/design/
 - https://ui.dev/rwd/strategy/page-layout/defining-breakpoints
 
+I also found these articles helpful: 
+- https://coder-coder.com/display-divs-side-by-side/
+- https://www.w3schools.com/css/css_positioning.asp
+
 Thanks for the great week! 
