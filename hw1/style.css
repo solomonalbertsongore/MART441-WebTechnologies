@@ -183,3 +183,29 @@ position: relative;
         font-size: 23px;
     }
 }
+
+@media (max-height: 755px)
+{
+    .list-container
+    {
+        top: 50%; 
+    }
+
+    .hero-text 
+    {
+        top: 50%; 
+    }
+}
+
+@media (max-height: 680px)
+{
+    .list-container
+    {
+        top: 60%; 
+    }
+
+    .hero-text 
+    {
+        top: 60%; 
+    }
+}
