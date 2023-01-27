@@ -1,0 +1,1 @@
+This week went very well for me! I found the history of JavaScript interesting, and appreciated both of the articles linked to read, as well as Grasshopper! The app is a fantastic time killer that is designed so well. I'm looking forward to more JS and integrating it into my websites. 
