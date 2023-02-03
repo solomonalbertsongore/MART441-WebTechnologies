@@ -8,20 +8,35 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <!-- title/play button -->
     <h1 class="white">THE TESTIMONY</h1>
-
     <button class="button" id="play">Play</button>
     
+    <!-- scene 1 -->
     <div class="scene1" id="scene1">
 
         <br />
         <p class="white">Is is correct that you're evening started around 7 o'clock?</p>
 
-        <button class="button" name="yes" id="yes">Yes</button>
-        <button class="button" name="no" id="no">No</button>
+        <button class="button" id="yes" onmousedown="showSceneTwo()">Yes</button>
+        <button class="button" id="no" onmousedown="showSceneTwo()">No</button>
     </div>
+
+    <!-- scene 2 -->
     <div class="scene2" id="scene2">
         <p class="white">blah blah blah blah blah blah blah blah blah</p>
+
+        <button class="button" id="yes" onmousedown="showSceneThree()">Yes</button>
+        <button class="button" id="no" onmousedown="showSceneThree()">No</button>
+
+    </div>
+
+    <!-- scene 3 -->
+    <div class="scene3" id="scene3">
+        <p class="white">blah</p>
+
+        <button class="button" id="yes" onmousedown="showSceneThree()">Yes</button>
+        <button class="button" id="no" onmousedown="showSceneThree()">No</button>
 
     </div>
 
