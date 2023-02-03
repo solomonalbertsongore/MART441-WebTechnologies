@@ -1,0 +1,11 @@
+@font-face
+{
+    font-family: titleFont;
+    src: url(../fonts/Aboreto-Regular.ttf); 
+}
+
+@font-face
+{
+    font-family: ralewayRegular;
+    src: url(../fonts/static/Raleway-Regular.ttf)
+}

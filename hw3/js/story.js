@@ -1,4 +1,9 @@
-// window.alert("i am here"); 
+/* SIONO credits: 
+    - Forrest Bauer
+    - Lucas
+    - Kait 
+    - Ryan Knowles
+*/
 
 var answeredYes = 0; 
 var playerName; 

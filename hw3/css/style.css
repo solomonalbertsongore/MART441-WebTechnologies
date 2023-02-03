@@ -1,6 +1,19 @@
 * 
 {
     background-color: black;
+    font-family: ralewayRegular;
+}
+
+#title 
+{
+    font-family: titleFont !important;
+    font-size: 60px;
+}
+
+#testimonyParagraph
+{
+    width: 50%;
+    text-align: center;
 }
 
 .scene1
@@ -16,14 +29,21 @@
 
 .button
 {
-    background-color: white;
+    font-family: titleFont !important;
+    font-size: 15px;
     padding: 10px 20px;
     margin: 0;
+    color: white;
 }
 
 .button:hover
 {
     background-color: grey;
+}
+
+.button:active
+{
+    background-color: darkred;
 }
 
 .buttonPosition
