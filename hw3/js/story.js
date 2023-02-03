@@ -14,6 +14,13 @@ document.getElementById('testimony').style.display = "none";
 document.getElementById('scene1').style.display = "none"; 
 document.getElementById('scene2').style.display = "none";
 document.getElementById('scene3').style.display = "none";
+document.getElementById('scene4').style.display = "none";
+document.getElementById('scene5').style.display = "none";
+document.getElementById('scene6').style.display = "none";
+document.getElementById('scene7').style.display = "none";
+document.getElementById('scene8').style.display = "none";
+document.getElementById('scene9').style.display = "none";
+document.getElementById('scene10').style.display = "none";
 
 // If user accepts, play game
 document.getElementById('warningYes').onclick = function() {warningBypass()};
