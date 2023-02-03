@@ -8,9 +8,26 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+
+    <!-- title -->
+    <div>
+        <h1 class="white">SIONO</h1>
+    </div>
+    
+    <div class="contentAlert">
+        <p class="alertText">Warning. The following game has content that may 
+            be considered offensive by some people. Do you wish 
+            to continue? 
+        </p>
+    </div>
+
+    <p class="white" id="hiPlayer"></p>
+
     <!-- title/play button -->
     <h1 class="white">THE TESTIMONY</h1>
-    <button class="button" id="play">Play</button>
+    <div class="buttonPosition">
+        <button class="button" id="play">Play</button>
+    </div>
     
     <!-- scene 1 -->
     <div class="scene1" id="scene1">
@@ -18,26 +35,30 @@
         <br />
         <p class="white">Is is correct that you're evening started around 7 o'clock?</p>
 
-        <button class="button" id="yes" onmousedown="showSceneTwo()">Yes</button>
-        <button class="button" id="no" onmousedown="showSceneTwo()">No</button>
+        <div class="buttonPosition">
+            <button class="button" id="yes" onmousedown="showSceneTwo()">Yes</button>
+            <button class="button" id="no" onmousedown="showSceneTwo()">No</button>
+        </div>
     </div>
 
     <!-- scene 2 -->
     <div class="scene2" id="scene2">
         <p class="white">blah blah blah blah blah blah blah blah blah</p>
 
-        <button class="button" id="yes" onmousedown="showSceneThree()">Yes</button>
-        <button class="button" id="no" onmousedown="showSceneThree()">No</button>
-
+        <div class="buttonPosition">
+            <button class="button" id="yes" onmousedown="showSceneThree()">Yes</button>
+            <button class="button" id="no" onmousedown="showSceneThree()">No</button>
+        </div>
     </div>
 
     <!-- scene 3 -->
     <div class="scene3" id="scene3">
         <p class="white">blah</p>
 
-        <button class="button" id="yes" onmousedown="showSceneThree()">Yes</button>
-        <button class="button" id="no" onmousedown="showSceneThree()">No</button>
-
+        <div class="buttonPosition">
+            <button class="button" id="yes" onmousedown="showSceneThree()">Yes</button>
+            <button class="button" id="no" onmousedown="showSceneThree()">No</button>
+        </div>
     </div>
 
     <!-- JavaScript for story -->

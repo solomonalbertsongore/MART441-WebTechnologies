@@ -19,10 +19,28 @@
     background-color: white;
     padding: 10px 20px;
     margin: 0;
-    position: relative; 
 }
 
 .button:hover
 {
     background-color: grey;
+}
+
+.buttonPosition
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentAlert
+{
+    padding: 10px;
+    background-color: darkred;
+    color: white;
+}
+
+.alertText
+{
+    background-color: darkred;
 }
