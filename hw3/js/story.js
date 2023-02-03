@@ -2,12 +2,20 @@
 
 var answeredYes = 0; 
 
+document.getElementById('scene1').style.visibility = "hidden"; 
+document.getElementById('scene2').style.visibility = "hidden"; 
 
+document.getElementById('play').onclick = function() {playGame()}; 
 
 document.getElementById('yes').onclick = function() {myFunction()};
 
 document.getElementById('no').onclick = function() {endOfGame()};
 
+function playGame()
+{
+    document.getElementById('scene1').style.visibility = "visible"; 
+    document.getElementById('play').style.visibility = "hidden"; 
+}
 
 function myFunction()
 {
