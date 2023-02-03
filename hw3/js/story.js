@@ -62,11 +62,15 @@ function showSceneOne()
 function showSceneTwo()
 {
     document.getElementById('scene2').style.display = "inline"; 
+    document.getElementById('scene1').style.display = "none"; 
+
 }
 
 function showSceneThree()
 {
     document.getElementById('scene3').style.display = "inline"; 
+    document.getElementById('scene2').style.display = "none"; 
+
 }
 
 function myFunction()
