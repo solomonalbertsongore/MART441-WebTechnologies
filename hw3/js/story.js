@@ -4,10 +4,11 @@ var answeredYes = 0;
 var playerName; 
 
 // Hides all of game elements on page load 
-document.getElementById('titleAndPlay').style.visibility = "hidden"; 
-document.getElementById('scene1').style.visibility = "hidden"; 
-document.getElementById('scene2').style.visibility = "hidden";
-document.getElementById('scene3').style.visibility = "hidden";
+document.getElementById('titleAndPlay').style.display = "none"; 
+document.getElementById('testimony').style.display = "none"; 
+document.getElementById('scene1').style.display = "none"; 
+document.getElementById('scene2').style.display = "none";
+document.getElementById('scene3').style.display = "none";
 
 // If user accepts, play game
 document.getElementById('warningYes').onclick = function() {warningBypass()};
@@ -22,7 +23,7 @@ document.getElementById('no').onclick = function() {endOfGame()};
 
 function warningBypass()
 {
-    document.getElementById('titleAndPlay').style.visibility = "visible"; 
+    document.getElementById('titleAndPlay').style.display = "inline"; 
     document.getElementById('contentAlert').style.display = "none"; 
 }
 
@@ -33,7 +34,7 @@ function closeGame()
 
 function playGame()
 {
-    document.getElementById('scene1').style.visibility = "visible"; 
+    document.getElementById('testimony').style.display = "inline"; 
     document.getElementById('play').style.display = "none"; 
 
     // Get's the players name and shows it on the page
@@ -49,14 +50,20 @@ function playGame()
     }
 }
 
+function showSceneOne()
+{
+    document.getElementById('scene1').style.display = "inline"; 
+}
+
+
 function showSceneTwo()
 {
-    document.getElementById('scene2').style.visibility = "visible"; 
+    document.getElementById('scene2').style.display = "inline"; 
 }
 
 function showSceneThree()
 {
-    document.getElementById('scene3').style.visibility = "visible"; 
+    document.getElementById('scene3').style.display = "inline"; 
 }
 
 function myFunction()
