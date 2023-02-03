@@ -1,0 +1,28 @@
+* 
+{
+    background-color: black;
+}
+
+.scene1
+{
+    position: relative;
+}
+
+.white
+{
+    color: white;
+    text-align: center;
+}
+
+.button
+{
+    background-color: white;
+    padding: 10px 20px;
+    margin: 0;
+    position: relative; 
+}
+
+.button:hover
+{
+    background-color: grey;
+}
