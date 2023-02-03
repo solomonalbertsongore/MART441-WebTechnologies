@@ -16,6 +16,7 @@ document.getElementById('warningYes').onclick = function() {warningBypass()};
 document.getElementById('warningNo').onclick = function() {closeGame()}; 
 // Play button - starts the game
 document.getElementById('play').onclick = function() {playGame()}; 
+document.getElementById('continue').onclick = function() {showSceneOne()}; 
 
 
 document.getElementById('yes').onclick = function() {myFunction()};
@@ -42,7 +43,7 @@ function playGame()
     // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt
     if(playerName != "" && playerName != null)
     {
-        document.getElementById('hiPlayer').innerHTML = "Hello " + playerName; 
+        document.getElementById('hiPlayer').innerHTML = "Police 1: So let me get this straight <em>" + playerName + "</em>. You remember <strong>nothing</strong> from last night? We have your testimony here...this is what you said last night: "; 
     }
     else
     {
@@ -53,6 +54,8 @@ function playGame()
 function showSceneOne()
 {
     document.getElementById('scene1').style.display = "inline"; 
+    document.getElementById('testimony').style.display = "none"; 
+
 }
 
 
