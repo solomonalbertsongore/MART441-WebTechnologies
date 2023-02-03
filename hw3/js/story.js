@@ -32,7 +32,7 @@ document.getElementById('play').onclick = function() {playGame()};
 document.getElementById('continue').onclick = function() {showSceneOne()}; 
 
 
-document.getElementById('yes').onclick = function() {myFunction()};
+document.getElementById('yes').onclick = function() {correctAnswer()};
 // document.getElementById('no').onclick = function() {endOfGame()};
 
 function warningBypass()
@@ -62,6 +62,12 @@ function playGame()
     {
         document.getElementById('hiPlayer').innerHTML = "You should have entered a name :("; 
     }
+}
+
+function correctAnswer()
+{
+    answeredYes += 1; 
+    console.log(answeredYes); 
 }
 
 function showSceneOne()
@@ -134,16 +140,11 @@ function showSceneTen()
     document.getElementById('scene9').style.display = "none"; 
 }
 
-
-function myFunction()
-{
-    answeredYes += 1; 
-    console.log(answeredYes); 
-}
-
 function endOfGame()
 {
     document.getElementById('finalScene').style.display = "inline"; 
+    document.getElementById('scene10').style.display = "none"; 
+
 
     if(answeredYes >= 7)
     {
