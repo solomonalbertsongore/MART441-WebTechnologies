@@ -3,13 +3,17 @@
 var answeredYes = 0; 
 var playerName; 
 
+// Hides all of game elements on page load 
 document.getElementById('titleAndPlay').style.visibility = "hidden"; 
 document.getElementById('scene1').style.visibility = "hidden"; 
 document.getElementById('scene2').style.visibility = "hidden";
 document.getElementById('scene3').style.visibility = "hidden";
 
-
+// If user accepts, play game
 document.getElementById('warningYes').onclick = function() {warningBypass()};
+// Closes browser if user doesn't want to play
+document.getElementById('warningNo').onclick = function() {closeGame()}; 
+// Play button - starts the game
 document.getElementById('play').onclick = function() {playGame()}; 
 
 
@@ -21,6 +25,12 @@ function warningBypass()
     document.getElementById('titleAndPlay').style.visibility = "visible"; 
     document.getElementById('contentAlert').style.display = "none"; 
 }
+
+function closeGame()
+{
+    window.close(); 
+}
+
 function playGame()
 {
     document.getElementById('scene1').style.visibility = "visible"; 
