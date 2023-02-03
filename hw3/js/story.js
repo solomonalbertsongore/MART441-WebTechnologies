@@ -21,6 +21,7 @@ document.getElementById('scene7').style.display = "none";
 document.getElementById('scene8').style.display = "none";
 document.getElementById('scene9').style.display = "none";
 document.getElementById('scene10').style.display = "none";
+document.getElementById('finalScene').style.display = "none";
 
 // If user accepts, play game
 document.getElementById('warningYes').onclick = function() {warningBypass()};
@@ -32,7 +33,7 @@ document.getElementById('continue').onclick = function() {showSceneOne()};
 
 
 document.getElementById('yes').onclick = function() {myFunction()};
-document.getElementById('no').onclick = function() {endOfGame()};
+// document.getElementById('no').onclick = function() {endOfGame()};
 
 function warningBypass()
 {
@@ -85,6 +86,55 @@ function showSceneThree()
 
 }
 
+function showSceneFour()
+{
+    document.getElementById('scene4').style.display = "inline"; 
+    document.getElementById('scene3').style.display = "none"; 
+
+}
+
+function showSceneFive()
+{
+    document.getElementById('scene5').style.display = "inline"; 
+    document.getElementById('scene4').style.display = "none"; 
+
+}
+
+function showSceneSix()
+{
+    document.getElementById('scene6').style.display = "inline"; 
+    document.getElementById('scene5').style.display = "none"; 
+
+}
+
+function showSceneSeven()
+{
+    document.getElementById('scene7').style.display = "inline"; 
+    document.getElementById('scene6').style.display = "none"; 
+
+}
+
+function showSceneEight()
+{
+    document.getElementById('scene8').style.display = "inline"; 
+    document.getElementById('scene7').style.display = "none"; 
+
+}
+
+function showSceneNine()
+{
+    document.getElementById('scene9').style.display = "inline"; 
+    document.getElementById('scene8').style.display = "none"; 
+
+}
+
+function showSceneTen()
+{
+    document.getElementById('scene10').style.display = "inline"; 
+    document.getElementById('scene9').style.display = "none"; 
+}
+
+
 function myFunction()
 {
     answeredYes += 1; 
@@ -93,17 +143,19 @@ function myFunction()
 
 function endOfGame()
 {
+    document.getElementById('finalScene').style.display = "inline"; 
+
     if(answeredYes >= 7)
     {
-        console.log("you're name has been cleared and you are free to go"); 
+        document.getElementById('determination').innerHTML = "Police 1: So" + playerName + ", after questioning, we have decided you are not guilty. You are free to go."; 
     }
     else if(answeredYes < 7 && answeredYes > 3)
     {
-        console.log("you are suspicious, go to jail"); 
+        document.getElementById('determination').innerHTML = "Police 1: So" + playerName + ", after questioning, we have decided you are suspicious. We are going to have to put you in jail."; 
     }
     else if(answeredYes < 3)
     {
-        console.log("you are certainly the culprit. enjoy you're coffin."); 
+        document.getElementById('determination').innerHTML = "Police 1: So" + playerName + ", after questioning, we have decided you are behind this. Enjoy you're coffin."; 
     }
 }
 
