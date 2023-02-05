@@ -9,6 +9,7 @@ var answeredYes = 0;
 var playerName; 
 
 // Hides all of game elements on page load 
+// I think there would be a better way to do this with an array but I'm not sure? 
 document.getElementById('titleAndPlay').style.display = "none"; 
 document.getElementById('testimony').style.display = "none"; 
 document.getElementById('scene1').style.display = "none"; 
@@ -31,9 +32,18 @@ document.getElementById('warningNo').onclick = function() {closeGame()};
 document.getElementById('play').onclick = function() {playGame()}; 
 document.getElementById('continue').onclick = function() {showSceneOne()}; 
 
-
-document.getElementById('yes').onclick = function() {correctAnswer()};
+/* For some reason, the stuff below didn't work. However when I added the function in the actual 
+HTML doc it worked. So the answeredYes() function is in the button now instead of in this doc. 
+// document.getElementById('yes1').onclick = function() {testClick()};
+// document.getElementById('yes').onclick = function() {correctAnswer()};
 // document.getElementById('no').onclick = function() {endOfGame()};
+
+/*
+function testClick()
+{
+    console.log('i have been clicked'); 
+}
+*/
 
 function warningBypass()
 {
