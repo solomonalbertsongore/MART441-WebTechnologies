@@ -162,11 +162,11 @@ function endOfGame()
     }
     else if(answeredYes < 7 && answeredYes > 3)
     {
-        document.getElementById('determination').innerHTML = "Police 1: So" + playerName + ", after questioning, we have decided you are suspicious. We are going to have to put you in jail."; 
+        document.getElementById('determination').innerHTML = "Police 1: So" + playerName + ", after questioning, we have decided you are suspicious. Hope you like iron bars."; 
     }
     else if(answeredYes < 3)
     {
-        document.getElementById('determination').innerHTML = "Police 1: So" + playerName + ", after questioning, we have decided you are behind this. Enjoy you're coffin."; 
+        document.getElementById('determination').innerHTML = "Police 1: So" + playerName + ", This doesn't add up. Enjoy you're coffin."; 
     }
 }
 
