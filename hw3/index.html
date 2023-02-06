@@ -30,7 +30,7 @@
             <button class="button" id="play">Play</button>
         </div>
         <br />
-        <img src="./images/titlePic.jpg" class="images">
+        <img src="./images/titlePic.jpg" class="images" id="titleImg">
     </div>
     
     <div id="testimony">
@@ -117,8 +117,8 @@
         <p class="white">Annnd you guys won money at the lobby casino playing blackjack?</p>
 
         <div class="buttonPosition">
-            <button class="button" id="yes" onmousedown="showSceneThree()">Yes</button>
-            <button class="button" id="no" onmousedown="showSceneThree(); correctAnswer()">No</button>
+            <button class="button" id="yes" onmousedown="showSceneThree(); correctAnswer()">Yes</button>
+            <button class="button" id="no" onmousedown="showSceneThree()">No</button>; 
         </div>
     </div>
 
@@ -147,8 +147,8 @@
         <p class="white">And the place Scooter took you to was called Candy County?</p>
 
         <div class="buttonPosition">
-            <button class="button" id="yes" onmousedown="showSceneSix(); correctAnswer()">Yes</button>
-            <button class="button" id="no" onmousedown="showSceneSix()">No</button>
+            <button class="button" id="yes" onmousedown="showSceneSix()">Yes</button>
+            <button class="button" id="no" onmousedown="showSceneSix(); correctAnswer()">No</button>
         </div>
     </div>
 
@@ -167,8 +167,8 @@
         <p class="white">A man named Saint assaulted Scooter with gaurds?</p>
 
         <div class="buttonPosition">
-            <button class="button" id="yes" onmousedown="showSceneEight()">Yes</button>
-            <button class="button" id="no" onmousedown="showSceneEight(); correctAnswer()">No</button>
+            <button class="button" id="yes" onmousedown="showSceneEight(); correctAnswer()">Yes</button>
+            <button class="button" id="no" onmousedown="showSceneEight()">No</button>
         </div>
     </div>
 
@@ -197,8 +197,8 @@
         <p class="white">Finally, when you woke up you were in a public park?</p>
 
         <div class="buttonPosition">
-            <button class="button" id="yes" onmousedown="endOfGame(); correctAnswer()">Yes</button>
-            <button class="button" id="no" onmousedown="endOfGame()">No</button>
+            <button class="button" id="yes" onmousedown="endOfGame()">Yes</button>
+            <button class="button" id="no" onmousedown="endOfGame(); correctAnswer()">No</button>
         </div>
     </div>
 

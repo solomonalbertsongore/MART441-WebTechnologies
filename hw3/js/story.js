@@ -60,9 +60,10 @@ function playGame()
 {
     document.getElementById('testimony').style.display = "inline"; 
     document.getElementById('play').style.display = "none"; 
+    document.getElementById('titleImg').style.display = "none"; 
 
     // Get's the players name and shows it on the page
-    let playerName = prompt("What is your name?"); 
+    playerName = prompt("What is your name?"); 
     // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt
     if(playerName != "" && playerName != null)
     {
@@ -158,15 +159,15 @@ function endOfGame()
 
     if(answeredYes >= 7)
     {
-        document.getElementById('determination').innerHTML = "Police 1: So" + playerName + ", after questioning, we have decided you are not guilty. You are free to go."; 
+        document.getElementById('determination').innerHTML = "Police 1: So " + playerName + ", after questioning, we have decided you are not guilty. You are free to go."; 
     }
     else if(answeredYes < 7 && answeredYes > 3)
     {
-        document.getElementById('determination').innerHTML = "Police 1: So" + playerName + ", after questioning, we have decided you are suspicious. Hope you like iron bars."; 
+        document.getElementById('determination').innerHTML = "Police 1: So " + playerName + ", after questioning, we have decided you are suspicious. Hope you like iron bars."; 
     }
     else if(answeredYes < 3)
     {
-        document.getElementById('determination').innerHTML = "Police 1: So" + playerName + ", This doesn't add up. Enjoy you're coffin."; 
+        document.getElementById('determination').innerHTML = "Police 1: So " + playerName + ", This doesn't add up. Enjoy you're coffin."; 
     }
 }
 
