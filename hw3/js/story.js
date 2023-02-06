@@ -23,6 +23,8 @@ document.getElementById('scene8').style.display = "none";
 document.getElementById('scene9').style.display = "none";
 document.getElementById('scene10').style.display = "none";
 document.getElementById('finalScene').style.display = "none";
+document.getElementById('credits').style.display = "none";
+
 
 // If user accepts, play game
 document.getElementById('warningYes').onclick = function() {warningBypass()};
@@ -31,6 +33,8 @@ document.getElementById('warningNo').onclick = function() {closeGame()};
 // Play button - starts the game
 document.getElementById('play').onclick = function() {playGame()}; 
 document.getElementById('continue').onclick = function() {showSceneOne()}; 
+// document.getElementById('creditBtn').onclick = function() {credits()}; 
+
 
 /* For some reason, the stuff below didn't work. However when I added the function in the actual 
 HTML doc it worked. So the answeredYes() function is in the button now instead of in this doc. 
@@ -169,5 +173,11 @@ function endOfGame()
     {
         document.getElementById('determination').innerHTML = "Police 1: So " + playerName + ", This doesn't add up. Enjoy you're coffin."; 
     }
+}
+
+function credits()
+{
+    document.getElementById('credits').style.display = "inline"; 
+    document.getElementById('finalScene').style.display = "none"; 
 }
 
