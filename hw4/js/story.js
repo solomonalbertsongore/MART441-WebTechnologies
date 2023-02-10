@@ -212,6 +212,15 @@ function getAnswer()
         document.getElementById('restartBtn').style.display = "inline"; 
 
     }
+    else if(answer === 'You have nothing on me' || answer === 'you have nothing on me' || answer == 'You Have Nothing On Me')
+    {
+        console.log('candy');
+        document.getElementById('answer1').innerHTML = "Oh really :)?"
+        document.getElementById('nextScene').style.display = "inline";
+        document.getElementById('finalScene').style.display = "none";  
+        document.getElementById('restartBtn').style.display = "inline"; 
+
+    }
     else
     {
         console.log('i am sorry, i couldnt undersatnd you'); 
