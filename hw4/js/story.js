@@ -181,7 +181,9 @@ function endOfChapterOne()
 
 /* ----- CHAPTER TWO ----- */ 
 
-document.getElementById('nextScene').style.display = "none"; 
+document.getElementById('nextScene').style.display = "none";
+document.getElementById('restartBtn').style.display = "none";  
+document.getElementById('restartGame').style.display = "none"; 
 
 
 //vdocument.getElementById('btnSubmit').onclick = function() {getAnswer()}; 
@@ -192,11 +194,23 @@ function getAnswer()
     // console.log(answer); 
     // console.log('im here'); 
 
-    if(answer === 'im here')
+    if(answer === 'go home' || answer === 'Go home' || answer == 'Go Home')
     {
-        console.log('so you have chosen death');
+        console.log('home');
+        document.getElementById('answer1').innerHTML = "Safe travels back home, sorry for the inconvience."
         document.getElementById('nextScene').style.display = "inline";
         document.getElementById('finalScene').style.display = "none";  
+        document.getElementById('restartBtn').style.display = "inline"; 
+
+    }
+    else if(answer === 'Ask more about candy land' || answer === 'Ask more about Candy Land' || answer == 'ask more about candy land')
+    {
+        console.log('candy');
+        document.getElementById('answer1').innerHTML = "Candy Land is one of the largest drug operations in Zoogrande's history - add more later :)."
+        document.getElementById('nextScene').style.display = "inline";
+        document.getElementById('finalScene').style.display = "none";  
+        document.getElementById('restartBtn').style.display = "inline"; 
+
     }
     else
     {
@@ -209,5 +223,16 @@ function credits()
 {
     document.getElementById('credits').style.display = "inline"; 
     document.getElementById('finalScene').style.display = "none"; 
+    document.getElementById('nextScene').style.display = "none"; 
 }
 
+// Loop/Do-while loop (not sure where to implement this yet). 
+function restartOption()
+{
+    restart = false; 
+    do 
+    {
+        document.getElementById('restartGame').style.display = "inline"; 
+    }
+    while(restart);
+}
