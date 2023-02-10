@@ -155,7 +155,7 @@ function showSceneTen()
     document.getElementById('scene9').style.display = "none"; 
 }
 
-function endOfGame()
+function endOfChapterOne()
 {
     document.getElementById('finalScene').style.display = "inline"; 
     document.getElementById('scene10').style.display = "none"; 
@@ -164,15 +164,45 @@ function endOfGame()
     if(answeredYes >= 7)
     {
         document.getElementById('determination').innerHTML = "Police 1: So " + playerName + ", after questioning, we have decided you are not guilty. You are free to go."; 
+        document.getElementById('options').innerHTML = "<br />Do you: <br /><br />- Go home <br />- Ask more about Candyland "; 
     }
-    else if(answeredYes < 7 && answeredYes > 3)
+    else if(answeredYes < 7 && answeredYes >= 3)
     {
         document.getElementById('determination').innerHTML = "Police 1: So " + playerName + ", after questioning, we have decided you are suspicious. Hope you like iron bars."; 
+        document.getElementById('options').innerHTML = "<br />Potential answers: <br /><br />- You have nothing on me <br />- I'd like to speak to my attorney "; 
     }
     else if(answeredYes < 3)
     {
         document.getElementById('determination').innerHTML = "Police 1: So " + playerName + ", This doesn't add up. Enjoy you're coffin."; 
+        document.getElementById('options').innerHTML = "<br />Do you: <br /><br />- Get up and run <br />- Go for the police officers gun "; 
     }
+}
+
+
+/* ----- CHAPTER TWO ----- */ 
+
+document.getElementById('nextScene').style.display = "none"; 
+
+
+//vdocument.getElementById('btnSubmit').onclick = function() {getAnswer()}; 
+
+function getAnswer()
+{
+    var answer = document.getElementById('txtAnswer').value; 
+    // console.log(answer); 
+    // console.log('im here'); 
+
+    if(answer === 'im here')
+    {
+        console.log('so you have chosen death');
+        document.getElementById('nextScene').style.display = "inline";
+        document.getElementById('finalScene').style.display = "none";  
+    }
+    else
+    {
+        console.log('i am sorry, i couldnt undersatnd you'); 
+    }
+
 }
 
 function credits()
@@ -180,3 +210,4 @@ function credits()
     document.getElementById('credits').style.display = "inline"; 
     document.getElementById('finalScene').style.display = "none"; 
 }
+
