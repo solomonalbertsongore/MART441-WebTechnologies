@@ -169,7 +169,7 @@ function endOfChapterOne()
     else if(answeredYes < 7 && answeredYes >= 3)
     {
         document.getElementById('determination').innerHTML = "Police 1: So " + playerName + ", after questioning, we have decided you are suspicious. Hope you like iron bars."; 
-        document.getElementById('options').innerHTML = "<br />Potential answers: <br /><br />- You have nothing on me <br />- I'd like to speak to my attorney "; 
+        document.getElementById('options').innerHTML = "<br />Potential answers: <br /><br />- You have nothing on me <br />- I would like to speak to my attorney "; 
     }
     else if(answeredYes < 3)
     {
@@ -203,7 +203,7 @@ function getAnswer()
         document.getElementById('restartBtn').style.display = "inline"; 
 
     }
-    else if(answer === 'Ask more about candy land' || answer === 'Ask more about Candy Land' || answer == 'ask more about candy land')
+    else if(answer === 'Ask more about candyland' || answer === 'Ask more about Candyland' || answer == 'ask more about candyland')
     {
         console.log('candy');
         document.getElementById('answer1').innerHTML = "Candy Land is one of the largest drug operations in Zoogrande's history - add more later :)."
@@ -216,6 +216,33 @@ function getAnswer()
     {
         console.log('candy');
         document.getElementById('answer1').innerHTML = "Oh really :)?"
+        document.getElementById('nextScene').style.display = "inline";
+        document.getElementById('finalScene').style.display = "none";  
+        document.getElementById('restartBtn').style.display = "inline"; 
+
+    }
+    else if(answer === 'I would like to speak to my attorney' || answer === 'I would like to speak to my attorney.')
+    {
+        console.log('candy');
+        document.getElementById('answer1').innerHTML = "Very well, what's there number?"
+        document.getElementById('nextScene').style.display = "inline";
+        document.getElementById('finalScene').style.display = "none";  
+        document.getElementById('restartBtn').style.display = "inline"; 
+
+    }
+    else if(answer === 'Run' || answer === 'RUN' || answer === 'run')
+    {
+        console.log('candy');
+        document.getElementById('answer1').innerHTML = "*You stand up and go for the door as fast as you can, but before you get to it a bullet lands right between your shoulder blades. You fall to the ground, paralyzed, the shadow of the policemen looming over your helpless body. BAM. All goes black. "
+        document.getElementById('nextScene').style.display = "inline";
+        document.getElementById('finalScene').style.display = "none";  
+        document.getElementById('restartBtn').style.display = "inline"; 
+
+    }
+    else if(answer === 'Go for the police officers gun' || answer === 'Go for the Police officers gun')
+    {
+        console.log('candy');
+        document.getElementById('answer1').innerHTML = "*You lunge your body across the table, hands outstrechted. The policeman casually scoots back in his chair, and pulls out his knife. He stabs your end and you are stuck to the table. He pulls out his gun and aims right at your forehead. All goes black. "
         document.getElementById('nextScene').style.display = "inline";
         document.getElementById('finalScene').style.display = "none";  
         document.getElementById('restartBtn').style.display = "inline"; 
