@@ -16,6 +16,24 @@
     height: auto;
 }
 
+/* Trying to get the width down for testimony here but it's not wanting 
+to work for some reason. 
+#testimony
+{
+    width: 50%;
+    border-style: solid;
+    border-width: 4px;
+    border-color: red;
+    background-color: red;
+}
+
+.testimonyParagraph
+{
+    width: 50%;
+    align-content: center;
+}
+*/
+
 .scene1
 {
     position: relative;
@@ -24,6 +42,12 @@
 .white
 {
     color: white;
+    text-align: center;
+}
+
+.red
+{
+    color: red;
     text-align: center;
 }
 

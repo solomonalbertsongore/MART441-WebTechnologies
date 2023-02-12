@@ -197,7 +197,7 @@ function getAnswer()
     if(answer === 'go home' || answer === 'Go home' || answer == 'Go Home')
     {
         console.log('home');
-        document.getElementById('answer1').innerHTML = "Safe travels back home, sorry for the inconvience."
+        document.getElementById('answer1').innerHTML = "Good. You smell like shit, go shower and forget this ever happened."
         document.getElementById('nextScene').style.display = "inline";
         document.getElementById('finalScene').style.display = "none";  
         document.getElementById('restartBtn').style.display = "inline"; 
@@ -206,7 +206,7 @@ function getAnswer()
     else if(answer === 'Ask more about candyland' || answer === 'Ask more about Candyland' || answer == 'ask more about candyland')
     {
         console.log('candy');
-        document.getElementById('answer1').innerHTML = "Candy Land is one of the largest drug operations in Zoogrande's history - add more later :)."
+        document.getElementById('answer1').innerHTML = "Candy Land is one of the largest drug operations in Zoogrande's history. It has been around for many decades, and is constantly on the move. That's really all we can tell you. We recommend you stay clear for a while, or we might actually throw you in jail, or worse, next time.";
         document.getElementById('nextScene').style.display = "inline";
         document.getElementById('finalScene').style.display = "none";  
         document.getElementById('restartBtn').style.display = "inline"; 
@@ -215,34 +215,34 @@ function getAnswer()
     else if(answer === 'You have nothing on me' || answer === 'you have nothing on me' || answer == 'You Have Nothing On Me')
     {
         console.log('candy');
-        document.getElementById('answer1').innerHTML = "Oh really :)?"
+        document.getElementById('answer1').innerHTML = "We don't NEED anything on you. This is Zoogrande, get that through your head. Enjoy prison, druggie";
         document.getElementById('nextScene').style.display = "inline";
         document.getElementById('finalScene').style.display = "none";  
         document.getElementById('restartBtn').style.display = "inline"; 
 
     }
-    else if(answer === 'I would like to speak to my attorney' || answer === 'I would like to speak to my attorney.')
+    else if(answer === 'I would like to speak to my attorney' || answer === 'i would like to speak to my attorney')
     {
         console.log('candy');
-        document.getElementById('answer1').innerHTML = "Very well, what's there number?"
+        document.getElementById('answer1').innerHTML = "You fool. You think you have any rights in Zoogrande? Jokes on you, lets go.";
         document.getElementById('nextScene').style.display = "inline";
         document.getElementById('finalScene').style.display = "none";  
         document.getElementById('restartBtn').style.display = "inline"; 
 
     }
-    else if(answer === 'Run' || answer === 'RUN' || answer === 'run')
+    else if(answer === 'get up and run' || answer === 'Get up and run' || answer === 'GET UP AND RUN')
     {
         console.log('candy');
-        document.getElementById('answer1').innerHTML = "*You stand up and go for the door as fast as you can, but before you get to it a bullet lands right between your shoulder blades. You fall to the ground, paralyzed, the shadow of the policemen looming over your helpless body. BAM. All goes black. "
+        document.getElementById('answer1').innerHTML = "*You stand up and go for the door as fast as you can, but before you get to it a bullet lands right between your shoulder blades. You fall to the ground, paralyzed, the shadow of the policemen looming over your helpless body. BAM. All goes black.*";
         document.getElementById('nextScene').style.display = "inline";
         document.getElementById('finalScene').style.display = "none";  
         document.getElementById('restartBtn').style.display = "inline"; 
 
     }
-    else if(answer === 'Go for the police officers gun' || answer === 'Go for the Police officers gun')
+    else if(answer === 'Go for the police officers gun' || answer === 'go for the police officers gun')
     {
         console.log('candy');
-        document.getElementById('answer1').innerHTML = "*You lunge your body across the table, hands outstrechted. The policeman casually scoots back in his chair, and pulls out his knife. He stabs your end and you are stuck to the table. He pulls out his gun and aims right at your forehead. All goes black. "
+        document.getElementById('answer1').innerHTML = "*You lunge your body across the table, hands outstrechted. The policeman casually scoots back in his chair, and pulls out his knife. He stabs your hand and you are stuck to the table. He pulls out his gun and aims right at your forehead. All goes black.*";
         document.getElementById('nextScene').style.display = "inline";
         document.getElementById('finalScene').style.display = "none";  
         document.getElementById('restartBtn').style.display = "inline"; 
@@ -251,6 +251,7 @@ function getAnswer()
     else
     {
         console.log('i am sorry, i couldnt undersatnd you'); 
+        document.getElementById('cantUnderstand').innerHTML = "What did you say? I can't understand you with that shit accent."; 
     }
 
 }

@@ -38,7 +38,7 @@
 
         <p class="white" id="hiPlayer"></p>
 
-        <p class="white">
+        <p class="white testimonyParagraph">
             "Listen man, I’ll explain it one more time. Last night some buddies and I had three goals; 
             get fucked up, meet some women, remember nothing. Sadly that last part didn’t play out so well, but here’s what I know. 
             <br />
@@ -218,6 +218,8 @@
             <input class="white" id="txtAnswer" type="text">
         </div>
         <br />
+        <p class="red" id="cantUnderstand"></p>
+        <br />
         <div class="buttonPosition">
             <button class="button" id="btnSubmit" onclick="getAnswer()">Submit</button>
         </div>
@@ -232,9 +234,15 @@
     <div id="nextScene">
         <p class="white" id="answer1"></p>
         <br />
+
+        <div class="buttonPosition">
+            <button class="button" id="creditsBtn" onclick="credits()">Credits</button>
+        </div>
+        <!-- 
         <div class="buttonPosition" id="restartBtn">
             <button class="button" id="creditsBtn" onmousedown="credits()">Credits</button>
         </div>
+    -->
     </div>
 
     <div class="credits" id="credits">
@@ -255,6 +263,10 @@
             <br />
             Thanks for playing!
         </p>
+
+        <div class="buttonPosition">
+            <button class="button" id="restartBtn" onclick="location.reload()">Restart</button>
+        </div>
         
         <!--
         <div class="buttonPosition">
@@ -263,11 +275,13 @@
         -->
     </div>
 
+    <!-- 
     <div id="restartGame">
         <div class="buttonPosition">
             <button class="button" id="restartBtn" onmousedown="">Restart</button>
         </div>
     </div>
+    -->
 
     <!-- JavaScript for story -->
     <script src="./js/story.js"></script>
