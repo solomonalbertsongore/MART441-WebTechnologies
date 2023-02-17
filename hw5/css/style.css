@@ -1,0 +1,19 @@
+#imagesContainer
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;
+    margin: auto;
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+}
+
+img
+{
+    padding: 20px; 
+    width: 200px;
+    height: 200px; 
+}
