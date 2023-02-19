@@ -3,7 +3,7 @@ var blankImages = ['./images/black.jpg', './images/black.jpg', './images/black.j
 , './images/black.jpg']; 
 
 var randomImages = ['./images/bird.png', './images/charizard.png', './images/diamond.png', './images/egg.png', './images/evee.png', './images/fancy.png', 
-'./images/floof.png', './images/grassPokemon', './images/starterGrass', './images/whale.png']; 
+'./images/floof.png', './images/grassPokemon.png', './images/starterGrass.png', './images/whale.png']; 
 
 var index = 0; 
 var imgNumber = 0; 
@@ -55,7 +55,10 @@ function showImage()
     {
         let elementId = e.target.id; 
         console.log(elementId); 
-
-        document.getElementById(elementId).src = './images/charizard.png'; 
+        
+        // https://css-tricks.com/snippets/javascript/select-random-item-array/
+        var randomImage = randomImages[Math.floor(Math.random() * randomImages.length)];
+        document.getElementById(elementId).src = randomImage; 
     })
 }
+
