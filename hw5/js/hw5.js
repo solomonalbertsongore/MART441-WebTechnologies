@@ -43,11 +43,19 @@ function createImages()
         // https://stackoverflow.com/questions/95731/why-does-an-onclick-property-set-with-setattribute-fail-to-work-in-ie
         img.onclick = function() {showImage()}; 
         document.getElementById('imagesContainer').appendChild(img);
+        imgNumber++; 
     }
 }
 
 function showImage()
 {
-    // document.getElementById()
-    console.log(this.id);  
+    // This gets the img id, so we can change it
+    // https://makersaid.com/id-of-clicked-dom-element-javascript/
+    document.addEventListener('click', (e) => 
+    {
+        let elementId = e.target.id; 
+        console.log(elementId); 
+
+        document.getElementById(elementId).src = './images/charizard.png'; 
+    })
 }
