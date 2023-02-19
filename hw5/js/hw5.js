@@ -6,6 +6,7 @@ var randomImages = ['./images/bird.png', './images/charizard.png', './images/dia
 './images/floof.png', './images/grassPokemon', './images/starterGrass', './images/whale.png']; 
 
 var index = 0; 
+var imgNumber = 0; 
 
 // console.log(blankImages.length + 'blank'); 
 // console.log(randomImages.length + 'random');
@@ -37,6 +38,16 @@ function createImages()
     {
         img = document.createElement('img'); 
         img.src = blankImages[i]; 
-        document.getElementById('imagesContainer').appendChild(img); 
+        // https://stackoverflow.com/questions/9422974/createelement-with-id
+        img.setAttribute("id", "img" + imgNumber);
+        // https://stackoverflow.com/questions/95731/why-does-an-onclick-property-set-with-setattribute-fail-to-work-in-ie
+        img.onclick = function() {showImage()}; 
+        document.getElementById('imagesContainer').appendChild(img);
     }
+}
+
+function showImage()
+{
+    // document.getElementById()
+    console.log(this.id);  
 }
