@@ -20,7 +20,10 @@ function createImages()
     // for every image in the array, create a new img element, and assign it to the images container div
     for(var i = 0; i < blankImages.length; i++)
     {
-        // creating an img element
+        /* creating an img element
+        Sources: 
+        - https://stackoverflow.com/questions/25151339/how-to-display-images-from-a-javascript-array-object-starting-with-the-first-im
+        */ 
         img = document.createElement('img'); 
         // assigning the img src (this is based off of number in array)
         img.src = blankImages[i]; 
@@ -63,3 +66,7 @@ function showImage()
     })
 }
 
+/* more sorces referenced in project
+- https://stackoverflow.com/questions/64946880/replace-main-image-with-the-clicked-one
+- https://makersaid.com/array-of-images-in-javascript/
+*/ 
