@@ -1,11 +1,11 @@
 // black images array
-var blankImages = ['./images/black.jpg', './images/black.jpg', './images/black.jpg', './images/black.jpg',
-'./images/black.jpg', './images/black.jpg', './images/black.jpg', './images/black.jpg', './images/black.jpg'
-, './images/black.jpg']; 
+var blankImages = ['../images/black.jpg', '../images/black.jpg', '../images/black.jpg', '../images/black.jpg',
+'../images/black.jpg', '../images/black.jpg', '../images/black.jpg', '../images/black.jpg', '../images/black.jpg'
+, '../images/black.jpg']; 
 
 // random images array
-var randomImages = ['./images/bird.png', './images/charizard.png', './images/diamond.png', './images/egg.png', './images/evee.png', './images/fancy.png', 
-'./images/floof.png', './images/grassPokemon.png', './images/starterGrass.png', './images/whale.png']; 
+var randomImages = ['../images/bird.png', '../images/charizard.png', '../images/diamond.png', '../images/egg.png', '../images/evee.png', '../images/fancy.png', 
+'../images/floof.png', '../images/grassPokemon.png', '../images/starterGrass.png', '../images/whale.png']; 
 
 // var index = 0; 
 // id number for random images
@@ -70,3 +70,27 @@ function showImage()
 - https://stackoverflow.com/questions/64946880/replace-main-image-with-the-clicked-one
 - https://makersaid.com/array-of-images-in-javascript/
 */ 
+
+function playerInfo()
+{
+    var information = {"fName": document.getElementById("fname").value, "lName": document.getElementById("lname").value, "age": document.getElementById("age").value, "attempts": 0};
+    // document.getElementById('info').innerHTML = information; 
+    localStorage.setItem("information", JSON.stringify(information)); 
+    // console.log(information.fName + information.lName + information.age + information.attempts); 
+}
+
+function getInfo() 
+{
+    var information = localStorage.getItem("information"); 
+    document.getElementById("info").innerHTML = "<h1>" + JSON.parse(information).fName + "</h1>"; 
+}
+
+/*
+function nextPage()
+{
+    window.location = "game.html"; 
+}
+*/
+
+document.getElementById('submit').onclick = function() {window.location = "./pages/game.html"};
+
