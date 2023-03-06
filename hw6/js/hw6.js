@@ -82,13 +82,16 @@ function playerInfo()
 function getInfo() 
 {
     var information = localStorage.getItem("information"); 
-    document.getElementById("info").innerHTML = "<h1>" + JSON.parse(information).fName + "</h1>"; 
+    document.getElementById("info").innerHTML = "<h1>Name: " + JSON.parse(information).fName + " " + 
+    JSON.parse(information).lName + 
+    "<br />Age: " + JSON.parse(information).age + 
+    "<br />Attempts: " + JSON.parse(information).attempts +"</h1>"; 
 }
 
 
 function changePage()
 {
-    window.location = "../game.html"; 
+    window.location = "./game.html"; 
     console.log('i am here'); 
 }
 
