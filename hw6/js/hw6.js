@@ -1,11 +1,11 @@
 // black images array
-var blankImages = ['../images/black.jpg', '../images/black.jpg', '../images/black.jpg', '../images/black.jpg',
-'../images/black.jpg', '../images/black.jpg', '../images/black.jpg', '../images/black.jpg', '../images/black.jpg'
-, '../images/black.jpg']; 
+var blankImages = ['./images/black.jpg', './images/black.jpg', './images/black.jpg', './images/black.jpg',
+'./images/black.jpg', './images/black.jpg', './images/black.jpg', './images/black.jpg', './images/black.jpg'
+, './images/black.jpg']; 
 
 // random images array
-var randomImages = ['../images/bird.png', '../images/charizard.png', '../images/diamond.png', '../images/egg.png', '../images/evee.png', '../images/fancy.png', 
-'../images/floof.png', '../images/grassPokemon.png', '../images/starterGrass.png', '../images/whale.png']; 
+var randomImages = ['./images/bird.png', './images/charizard.png', './images/diamond.png', './images/egg.png', './images/evee.png', './images/fancy.png', 
+'./images/floof.png', './images/grassPokemon.png', './images/starterGrass.png', './images/whale.png']; 
 
 // var index = 0; 
 // id number for random images
@@ -85,12 +85,11 @@ function getInfo()
     document.getElementById("info").innerHTML = "<h1>" + JSON.parse(information).fName + "</h1>"; 
 }
 
-/*
-function nextPage()
-{
-    window.location = "game.html"; 
-}
-*/
 
-document.getElementById('submit').onclick = function() {window.location = "./pages/game.html"};
+function changePage()
+{
+    window.location = "../game.html"; 
+    console.log('i am here'); 
+}
+
 
