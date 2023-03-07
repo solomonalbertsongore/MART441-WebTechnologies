@@ -63,6 +63,7 @@ function showImage()
         var randomImage = randomImages[Math.floor(Math.random() * randomImages.length)];
         // changing the img relative url to match actual img
         document.getElementById(elementId).src = randomImage; 
+        console.log(elementId); 
     })
 }
 

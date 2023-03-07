@@ -1,7 +1,4 @@
-This week was fun and challenging for me! There were quite 
-a few new concepts that I explored, especially with event 
-listeners and element creation via JS. I had to do a lot 
-of research and referencing to get to the goal for this week. 
-I'm quite happy about it though now that it's all said and done! 
-I tried to link all of the sources I refenereced for use later. 
-Thanks for an interesting week! 
+This week I've been struggling quite a bit. I realized that during last 
+weeks homework I made a mistake regarding populating the new images, and 
+giving them all the same id's (so I can check if they match later). Also, 
+I'm struggling to figure out how I'm going to determine if the player fails or not. And finally I had a rather stressful week, and haven't been able to set aside as much time as I would have liked for this homework. However, I'm going to continue to do my best and get it done!
