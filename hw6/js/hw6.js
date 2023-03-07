@@ -4,8 +4,8 @@ var blankImages = ['./images/black.jpg', './images/black.jpg', './images/black.j
 , './images/black.jpg']; 
 
 // random images array
-var randomImages = ['./images/bird.png', './images/charizard.png', './images/diamond.png', './images/egg.png', './images/evee.png', './images/fancy.png', 
-'./images/floof.png', './images/grassPokemon.png', './images/starterGrass.png', './images/whale.png']; 
+var randomImages = ['./images/bird.png', './images/charizard.png', './images/diamond.png', './images/egg.png', './images/evee.png', 
+'./images/bird.png', './images/charizard.png', './images/diamond.png', './images/egg.png', './images/evee.png']; 
 
 // var index = 0; 
 // id number for random images
@@ -63,6 +63,17 @@ function showImage()
         var randomImage = randomImages[Math.floor(Math.random() * randomImages.length)];
         // changing the img relative url to match actual img
         document.getElementById(elementId).src = randomImage; 
+
+        /* the thought behind this is that if I could compare the image src urls then I could check to 
+        see if player clicked two images with the same src and then give them a point based off that...
+        but I don't think this will work. It has to be through ID's*/ 
+        /* I also think I need to create the actual image twice in a new array with the same id - check this
+        article out when you have time next: https://stackoverflow.com/questions/70005096/how-to-use-only-twice-the-same-item-in-an-array-in-js
+        */ 
+        if(document.getElementById(elementId) == randomImage)
+        {
+            console.log(information.attempts + 1 + " // The player has scored!"); 
+        }
         console.log(elementId); 
     })
 }
@@ -93,7 +104,7 @@ function getInfo()
 function changePage()
 {
     window.location = "./game.html"; 
-    console.log('i am here'); 
+    // console.log('i am here'); 
 }
 
 
