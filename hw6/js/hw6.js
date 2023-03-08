@@ -10,6 +10,7 @@ var randomImages = ['./images/bird.png', './images/charizard.png', './images/dia
 // var index = 0; 
 // id number for random images
 var imgNumber = 0; 
+var timesClicked = 0; 
 
 
 function createImages()
@@ -55,7 +56,20 @@ function showImage()
         // setting a local var and getting the clicked elements id
         let elementId = e.target.id; 
         // console.log(elementId); 
-        
+        timesClicked++; 
+
+        if(timesClicked = 1)
+        {
+            // number1 = elementId; 
+            console.log('ive been clicked once'); 
+            console.log(timesClicked); 
+        }
+        else if(timesClicked = 2)
+        {
+            //mumber2 = elementId; 
+            console.log('ive been clicked twice' + ' :  new value = ' + timesClicked); 
+            timesClicked = 0; 
+        }
         /* Setting a random img on click (not sure how to sync quite yet)
         Source: 
         - https://css-tricks.com/snippets/javascript/select-random-item-array/
@@ -70,10 +84,13 @@ function showImage()
         /* I also think I need to create the actual image twice in a new array with the same id - check this
         article out when you have time next: https://stackoverflow.com/questions/70005096/how-to-use-only-twice-the-same-item-in-an-array-in-js
         */ 
-        if(document.getElementById(elementId) == randomImage)
+
+        /* COMPARE SRC VALUES HERE 
+        if(document.getElementById(number1).src == document.getElementById(number2).src) // comparing srcs here
         {
             console.log(information.attempts + 1 + " // The player has scored!"); 
         }
+        */
         console.log(elementId); 
     })
 }
