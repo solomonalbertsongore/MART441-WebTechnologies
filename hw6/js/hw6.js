@@ -11,7 +11,7 @@ var randomImages = ['./images/bird.png', './images/charizard.png', './images/dia
 // id number for random images
 var imgNumber = 0; 
 var timesClicked = 0; 
-
+var x = 0; 
 
 function createImages()
 {
@@ -47,6 +47,7 @@ function createImages()
 
 function showImage()
 {
+ 
     /* This gets the img id, so we can change it
     Source: 
     - https://makersaid.com/id-of-clicked-dom-element-javascript/
@@ -55,21 +56,30 @@ function showImage()
     {
         // setting a local var and getting the clicked elements id
         let elementId = e.target.id; 
+        let number1; 
+        let number2; 
         // console.log(elementId); 
-        timesClicked++; 
 
-        if(timesClicked = 1)
+        timesClicked++; 
+        // console.log(timesClicked); 
+        
+        if(timesClicked === 1)
         {
             // number1 = elementId; 
             console.log('ive been clicked once'); 
             console.log(timesClicked); 
+            number1 = document.getElementById(elementId).src; 
         }
-        else if(timesClicked = 2)
+        else if(timesClicked === 2)
         {
             //mumber2 = elementId; 
-            console.log('ive been clicked twice' + ' :  new value = ' + timesClicked); 
+            console.log('ive been clicked twice'); 
             timesClicked = 0; 
+            console.log(timesClicked); 
+            number2 = elementId; 
         }
+        
+
         /* Setting a random img on click (not sure how to sync quite yet)
         Source: 
         - https://css-tricks.com/snippets/javascript/select-random-item-array/
@@ -91,7 +101,9 @@ function showImage()
             console.log(information.attempts + 1 + " // The player has scored!"); 
         }
         */
-        console.log(elementId); 
+        
+        console.log(randomImage); 
+        // console.log('number1: ' + number1 + 'and number2: ' + number2); 
     })
 }
 
