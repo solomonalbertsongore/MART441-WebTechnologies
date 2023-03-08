@@ -63,22 +63,6 @@ function showImage()
         timesClicked++; 
         // console.log(timesClicked); 
         
-        if(timesClicked === 1)
-        {
-            // number1 = elementId; 
-            console.log('ive been clicked once'); 
-            console.log(timesClicked); 
-            number1 = document.getElementById(elementId).src; 
-        }
-        else if(timesClicked === 2)
-        {
-            //mumber2 = elementId; 
-            console.log('ive been clicked twice'); 
-            timesClicked = 0; 
-            console.log(timesClicked); 
-            number2 = elementId; 
-        }
-        
 
         /* Setting a random img on click (not sure how to sync quite yet)
         Source: 
@@ -87,6 +71,39 @@ function showImage()
         var randomImage = randomImages[Math.floor(Math.random() * randomImages.length)];
         // changing the img relative url to match actual img
         document.getElementById(elementId).src = randomImage; 
+
+        if(timesClicked === 1)
+        {
+            // number1 = elementId; 
+            console.log('ive been clicked once'); 
+            console.log(timesClicked); 
+            // first image clicked src here
+            number1 = randomImage; 
+            console.log('number1: ' + number1);
+        }
+        else if(timesClicked === 2)
+        {
+            //mumber2 = elementId; 
+            console.log('ive been clicked twice'); 
+            timesClicked = 0; 
+            // console.log(timesClicked); 
+            // second img clicked src
+            number2 = randomImage; 
+            console.log('number2: ' + number2); 
+
+            // checking to see if the image srcs are the same here, if they are 
+            // award a point, if not, flip everything black again
+            if(number1 === number2)
+            {
+                console.log('add a point!!'); 
+            }
+            else 
+            {
+                console.log('darn, restart!'); 
+            }
+        }
+
+        //number1 = randomImage; 
 
         /* the thought behind this is that if I could compare the image src urls then I could check to 
         see if player clicked two images with the same src and then give them a point based off that...
@@ -102,7 +119,9 @@ function showImage()
         }
         */
         
-        console.log(randomImage); 
+        // console.log(number1); 
+
+
         // console.log('number1: ' + number1 + 'and number2: ' + number2); 
     })
 }
