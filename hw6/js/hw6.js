@@ -14,6 +14,7 @@ var timesClicked = 0;
 var x = 0; 
 var number1; 
 var number2; 
+var information = localStorage.getItem("information"); 
 
 function createImages()
 {
@@ -119,7 +120,12 @@ function showImage(num)
                 localStorage.setItem("attempts", ++attempts); 
                 console.log(attempts); 
                 
-                document.getElementById("info").innerHTML =  "<br />Attempts: " + attempts +"</h1>"; 
+                // document.getElementById("info").innerHTML =  "<h1><br />Attempts: " + attempts +"</h1>"; 
+
+                document.getElementById("info").innerHTML = "<h1>Name: " + JSON.parse(information).fName + " " + 
+                JSON.parse(information).lName + 
+                "<br />Age: " + JSON.parse(information).age + 
+                "<br />Attempts: " + attempts +"</h1>"; 
             }
     
         }
