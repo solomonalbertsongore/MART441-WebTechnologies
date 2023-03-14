@@ -12,6 +12,8 @@ var randomImages = ['./images/bird.png', './images/charizard.png', './images/dia
 var imgNumber = 0; 
 var timesClicked = 0; 
 var x = 0; 
+var number1; 
+var number2; 
 
 function createImages()
 {
@@ -67,8 +69,9 @@ function showImage(num)
         //let elementId = e.target.id; 
         
         let elementId = "img" + num;
-        let number1; 
-        let number2; 
+        var attempts = localStorage.getItem("attempts"); 
+        // let number1; 
+        // let number2; 
          
 
         timesClicked++; 
@@ -87,10 +90,10 @@ function showImage(num)
         {
             // number1 = elementId; 
             console.log('ive been clicked once'); 
-            console.log(timesClicked); 
+            // console.log(timesClicked); 
             // first image clicked src here
             number1 = randomImage; 
-            console.log('number1: ' + number1);
+            // console.log('number1: ' + number1);
         }
         else if(timesClicked === 2)
         {
@@ -100,18 +103,23 @@ function showImage(num)
             // console.log(timesClicked); 
             // second img clicked src
             number2 = randomImage; 
-            console.log('number2: ' + number2); 
+            // console.log('number2: ' + number2); 
 
             // checking to see if the image srcs are the same here, if they are 
             // award a point, if not, flip everything black again
             if(number1 === number2)
             {
                 console.log('add a point!!'); 
+                // JSON.parse(information).attempts.value + 1; 
             }
             else if (number1 != number2 )
             {
                 console.log('darn, restart!'); 
-                console.log(number1 + ' ' + number2); 
+                // console.log('number1 = ' + number1); 
+                localStorage.setItem("attempts", ++attempts); 
+                console.log(attempts); 
+                
+                document.getElementById("info").innerHTML =  "<br />Attempts: " + attempts +"</h1>"; 
             }
     
         }
