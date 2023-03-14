@@ -17,7 +17,7 @@ function createImages()
 {
     // var img = document.createElement('img');
     // this will hold the selected img
-    var img;  
+    //var img;  
     // for every image in the array, create a new img element, and assign it to the images container div
     for(var i = 0; i < blankImages.length; i++)
     {
@@ -25,40 +25,51 @@ function createImages()
         Sources: 
         - https://stackoverflow.com/questions/25151339/how-to-display-images-from-a-javascript-array-object-starting-with-the-first-im
         */ 
-        img = document.createElement('img'); 
+        const img = document.createElement('img'); 
         // assigning the img src (this is based off of number in array)
-        img.src = blankImages[i]; 
+        img.src = blankImages[0]; 
         /* setting the id of the created img
         Source: 
         - https://stackoverflow.com/questions/9422974/createelement-with-id
         */
-        img.setAttribute("id", "img" + imgNumber);
+      
+        img.setAttribute("id", "img" + i);
         /* assigning the img an onclick function (we have to do this when its created)
         Source: 
         - https://stackoverflow.com/questions/95731/why-does-an-onclick-property-set-with-setattribute-fail-to-work-in-ie
         */ 
-        img.onclick = function() {showImage()}; 
+       
+       // img.onclick = function() {
+       //     showImage())}; 
+        img.setAttribute('onclick', "showImage("+ i+ ")");
+      
+        
         // adding the new image to the images container
         document.getElementById('imagesContainer').appendChild(img);
+            
         // incrementing the imgNumber var so we can get a new id for each img
-        imgNumber++; 
+       // imgNumber++; 
+       
     }
 }
 
-function showImage()
+function showImage(num)
 {
  
     /* This gets the img id, so we can change it
     Source: 
     - https://makersaid.com/id-of-clicked-dom-element-javascript/
     */
-    document.addEventListener('click', (e) => 
-    {
+   // document.addEventListener('click', (e) => 
+   // {
+   
         // setting a local var and getting the clicked elements id
-        let elementId = e.target.id; 
+        //let elementId = e.target.id; 
+        
+        let elementId = "img" + num;
         let number1; 
         let number2; 
-        // console.log(elementId); 
+         
 
         timesClicked++; 
         // console.log(timesClicked); 
@@ -97,10 +108,12 @@ function showImage()
             {
                 console.log('add a point!!'); 
             }
-            else 
+            else if (number1 != number2 )
             {
                 console.log('darn, restart!'); 
+                console.log(number1 + ' ' + number2); 
             }
+    
         }
 
         //number1 = randomImage; 
@@ -123,7 +136,7 @@ function showImage()
 
 
         // console.log('number1: ' + number1 + 'and number2: ' + number2); 
-    })
+   // })
 }
 
 /* more sorces referenced in project
