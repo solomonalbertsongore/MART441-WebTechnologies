@@ -126,6 +126,8 @@ function showImage(num)
                 JSON.parse(information).lName + 
                 "<br />Age: " + JSON.parse(information).age + 
                 "<br />Attempts: " + attempts +"</h1>"; 
+
+                // document.getElementById(elementId).src = blankImages[1]; 
             }
     
         }
@@ -157,6 +159,12 @@ function showImage(num)
 - https://stackoverflow.com/questions/64946880/replace-main-image-with-the-clicked-one
 - https://makersaid.com/array-of-images-in-javascript/
 */ 
+
+
+function makeImgBlack()
+{
+    
+}
 
 function playerInfo()
 {
