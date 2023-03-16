@@ -17,3 +17,15 @@ img
     border-radius: 100px;
     flex-direction: column;
 }
+
+#button 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    padding: 30px;
+    padding-top: 5px; 
+    padding-bottom: 5px;
+}
