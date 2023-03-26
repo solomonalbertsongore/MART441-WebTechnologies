@@ -27,11 +27,11 @@ for(let i = 0; i < images.length; i++)
         $.each(images, function()
         {
         $('#fadedImg').fadeIn('slow').fadeOut('slow', function(){
-        $('#fadedImg').attr('src', images[4].image)})
+        $('#fadedImg').attr('src', images[1].image)})
         .fadeIn('slow');
 
         $('#words').fadeIn('slow').fadeOut('slow', function(){
-        $('#words').text(images[4].text)})
+        $('#words').text(images[1].words)})
         .fadeIn('slow');
 
         timesCnt++; 
