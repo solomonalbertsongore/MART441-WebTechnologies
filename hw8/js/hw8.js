@@ -41,9 +41,9 @@ function loopStuff()
         // setInterval(changeTxtBig(), 500); 
         setInterval(changeTxtSmall, 500);
 
-        $('.shape').fadeIn(2000).fadeOut(2000, function(){
-        $('.shape').attr('class', images[i].shape)})
-        .fadeIn(2000);
+        $('#shape').fadeIn(5000).fadeOut(5000, function(){
+        $('#shape').attr('class', images[i].shape)})
+        .fadeIn(5000);
 
         // $('.shape').attr('class', images[i].shape); 
         
