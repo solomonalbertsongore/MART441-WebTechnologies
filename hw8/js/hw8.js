@@ -11,18 +11,24 @@ new fadedImg('./imgs/egg.png', "This is an egg"),
 new fadedImg('./imgs/evee.png', "This is a cute fox/dog"),
 ]; 
 
-var timesCnt = 0; 
 
+const canvas = document.querySelector('canvas'); 
+const context = canvas.getContext('2d'); 
 
 for(let i = 0; i < images.length; i++)
 {
-    // var randomImage = images[Math.floor(Math.random() * images.length)];
-    var img = images[i]; 
+    loopStuff(); 
 
-};
+    if(i === 5)
+    {
+        loopStuff(); 
+    }
+}
 
-    $(function () {});
-    $(document).ready(function () {
+function loopStuff()
+{
+    $(document).ready(function (){
+
         // $('#fadedImg').fadeIn('slow').fadeOut('slow').$('#fadedImg').attr('src', randomImage); 
         $.each(images, function(i)
         {
@@ -33,13 +39,24 @@ for(let i = 0; i < images.length; i++)
         $('#words').fadeIn(2000).fadeOut(2000, function(){
         $('#words').text(images[i].words)})
         .fadeIn(2000);
-
-        timesCnt++; 
-        console.log(timesCnt); 
-         
-
         })
-    });
+})
+}
 
 
+/*
+    $(function () {});
+    $(document).ready(function (){
 
+        // $('#fadedImg').fadeIn('slow').fadeOut('slow').$('#fadedImg').attr('src', randomImage); 
+        $.each(images, function(i)
+        {
+        $('#fadedImg').fadeIn(2000).fadeOut(2000, function(){
+        $('#fadedImg').attr('src', images[i].image)})
+        .fadeIn(2000);
+
+        $('#words').fadeIn(2000).fadeOut(2000, function(){
+        $('#words').text(images[i].words)})
+        .fadeIn(2000);
+        })
+    });*/

@@ -1,0 +1,15 @@
+img 
+{
+    width: 250px;
+    height: auto;
+}
+
+#content
+{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
