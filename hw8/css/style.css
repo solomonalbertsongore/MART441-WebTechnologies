@@ -13,3 +13,25 @@ img
     margin: auto;
     flex-direction: column;
 }
+
+.square 
+{
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+}
+
+.circle 
+{
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+    border-radius: 50%;
+}
+
+.rectangle 
+{
+    height: 50px;
+    width: 100px;
+    background-color: #555;
+}
