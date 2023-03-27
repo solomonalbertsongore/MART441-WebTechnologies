@@ -20,6 +20,9 @@ img
     height: 50px;
     width: 50px;
     background-color: #555;
+    position: absolute; 
+    top: 100px; 
+    left: 25px;
 }
 
 .circle 
@@ -28,6 +31,9 @@ img
     width: 50px;
     background-color: #555;
     border-radius: 50%;
+    position: absolute; 
+    top: 100px; 
+    left: 25px;
 }
 
 .rectangle 
@@ -35,6 +41,9 @@ img
     height: 50px;
     width: 100px;
     background-color: #555;
+    position: absolute; 
+    top: 100px; 
+    left: 25px;
 }
 
 .trapezoid 
@@ -44,6 +53,9 @@ img
 	border-right: 25px solid transparent;
 	height: 0;
 	width: 125px;
+    position: absolute; 
+    top: 100px; 
+    left: 25px;
 }
 
 .parallelogram 
@@ -52,4 +64,7 @@ img
 	height: 50px;
 	transform: skew(20deg);
 	background: #555;
+    position: absolute; 
+    top: 100px; 
+    left: 25px;
 }

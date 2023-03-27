@@ -46,6 +46,12 @@ function loopStuff()
         .fadeIn(1000);
 
         $('#shape').animate({height: '200px', width: '200px'}, 2000).animate({height: '50px', width: '50px'}, 2000);  
+        $('#shape').animate({left: '250px', right: '250px'}, 2000).animate({left: '50px', right: '50px'}, 2000);  
+
+        /*
+        $('#shape').animate({height: '200px', width: '200px', right: '250px'
+        }, 2000).animate({height: '50px', width: '50px', left: '250px'}, 2000);  
+        */
 
         // $('.shape').attr('class', images[i].shape); 
         
