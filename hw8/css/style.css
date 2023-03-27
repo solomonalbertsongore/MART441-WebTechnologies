@@ -14,6 +14,7 @@ img
     flex-direction: column;
 }
 
+/* shapes pulled from w3schools */ 
 .square 
 {
     height: 50px;
@@ -34,4 +35,21 @@ img
     height: 50px;
     width: 100px;
     background-color: #555;
+}
+
+.trapezoid 
+{
+	border-bottom: 50px solid #555;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 125px;
+}
+
+.parallelogram 
+{
+	width: 100px;
+	height: 50px;
+	transform: skew(20deg);
+	background: #555;
 }

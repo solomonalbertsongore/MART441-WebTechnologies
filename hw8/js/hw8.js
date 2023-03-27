@@ -7,8 +7,8 @@
 let images = [new fadedImg('./imgs/bird.png', "This is a bird", 'square'),
 new fadedImg('./imgs/charizard.png', "This is a dragon", 'circle'),
 new fadedImg('./imgs/diamond.png', "This is a weird lizard", 'rectangle'),
-new fadedImg('./imgs/egg.png', "This is an egg"),
-new fadedImg('./imgs/evee.png', "This is a cute fox/dog"),
+new fadedImg('./imgs/egg.png', "This is an egg", 'trapezoid'),
+new fadedImg('./imgs/evee.png', "This is a cute fox/dog", 'parallelogram'),
 ]; 
 
 
@@ -43,7 +43,9 @@ function loopStuff()
 
         $('#shape').fadeIn(5000).fadeOut(5000, function(){
         $('#shape').attr('class', images[i].shape)})
-        .fadeIn(5000);
+        .fadeIn(1000);
+
+        $('#shape').animate({height: '200px', width: '200px'}, 2000).animate({height: '50px', width: '50px'}, 2000);  
 
         // $('.shape').attr('class', images[i].shape); 
         
