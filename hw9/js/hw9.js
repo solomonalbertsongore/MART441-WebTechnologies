@@ -1,15 +1,31 @@
-// retrieve/display data
+// Attempt to display the data properly 
+$(document).ready(function () {
+    $("button").click(function () {
+    $.getJSON('./json/pokedex.json', function(pkmn)
+    {
+        $('#dataDiv').html('Name: ' + pkmn.name + '<br />'
+        + 'Number: ' + pkmn.num + '<br />' + 
+        'Img: ' + pkmn.img);
+
+    });
+        });
+    });
+
+
+// retrieve/display data messily
 $(document).ready(function(){
     $("button").click(function(){
       $.getJSON("./json/pokedex.json", function(result){
         $.each(result, function(i, field){
-          $("div").append(JSON.stringify(field));
+          $("#messyData").append(JSON.stringify(field));
         });
       })
   
       $('div').stylish();
     });
   });
+  
+
 
 // plugin 
 $.fn.stylish = function() 
