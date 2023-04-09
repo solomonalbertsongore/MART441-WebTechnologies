@@ -60,7 +60,7 @@ var square1;
 var square2;
 drawSquare();
 var colorArray = ['black', 'red', 'blue', 'white', 'grey'];
-var randomColor;
+var randomColor; 
 
 function drawSquare()
 {
@@ -89,34 +89,40 @@ $(document).ready(function(){
 
 function getKey(event)
 {
-  randomColor = colorArray[Math.floor(Math.random()*colorArray.length)];
-  // console.log(randomColor); 
+    randomColor = colorArray[Math.floor(Math.random()*colorArray.length)];
 
-  var didCollide = hasCollided(square1, square2);
-  if(didCollide)
-    {
-      // window.alert("ouch!");
-      // console.log('my color is: ' + randomColor);
-      $('#myCanvas').css('background-color', randomColor);
-    }
-    var char = event.which || event.keyCode;
-    var actualLetter = String.fromCharCode(char);
-if(actualLetter == "w")
-    {
-        moveUp();
-    }
- else if(actualLetter == "s")
-    {
-        moveDown();
-    }
- else if(actualLetter == "d")
-    {
-        moveRight();
-    }
- else if(actualLetter == "a")
-    {
-        moveLeft();
-    }
+    // console.log(randomColor); 
+
+    var didCollide = hasCollided(square1, square2);
+    if(didCollide)
+        {
+        // window.alert("ouch!");
+        // console.log('my color is: ' + randomColor);
+        $('#myCanvas').css('background-color', randomColor);
+        square1.setHeight(Math.random() * 100); 
+        square1.setWidth(Math.random() * 100); 
+        square2.setHeight(Math.random() * 100)
+        square2.setWidth(Math.random() * 100); 
+        drawSquare(); 
+        }
+        var char = event.which || event.keyCode;
+        var actualLetter = String.fromCharCode(char);
+    if(actualLetter == "w")
+        {
+            moveUp();
+        }
+    else if(actualLetter == "s")
+        {
+            moveDown();
+        }
+    else if(actualLetter == "d")
+        {
+            moveRight();
+        }
+    else if(actualLetter == "a")
+        {
+            moveLeft();
+        }
     
     drawSquare();
 }
