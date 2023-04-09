@@ -59,6 +59,8 @@ var y2 = 100;
 var square1;
 var square2;
 drawSquare();
+var colorArray = ['black', 'red', 'blue', 'white', 'grey'];
+var randomColor;
 
 function drawSquare()
 {
@@ -87,11 +89,15 @@ $(document).ready(function(){
 
 function getKey(event)
 {
-  
+  randomColor = colorArray[Math.floor(Math.random()*colorArray.length)];
+  // console.log(randomColor); 
+
   var didCollide = hasCollided(square1, square2);
   if(didCollide)
     {
-      window.alert("ouch!");
+      // window.alert("ouch!");
+      // console.log('my color is: ' + randomColor);
+      $('#myCanvas').css('background-color', randomColor);
     }
     var char = event.which || event.keyCode;
     var actualLetter = String.fromCharCode(char);
