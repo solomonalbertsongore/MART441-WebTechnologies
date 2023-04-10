@@ -74,7 +74,6 @@ function drawSquare()
   ctx.clearRect(0,0,800,600);
   ctx.fillStyle = square1.theColor;
   ctx.fillRect(square1.theX, square1.theY, square1.theWidth, square1.theHeight);
-  // ITS BECAUSE DRAW SQUARE KEEPS GETTING CALLED AND THESE ARE SET VALUES
   ctx.fillStyle = square2.theColor;
   ctx.fillRect(square2.theX, square2.theY, square2.theWidth, square2.theHeight); 
 }
@@ -112,8 +111,8 @@ function getKey(event)
         square2.setWidth(square2.theWidth - 10); 
         square2.setHeight(square2.theHeight - 10);
 
-        console.log('height: ' + square1.theHeight);
-        console.log('width: ' + square1.theHeight);
+        // console.log('height: ' + square1.theHeight);
+        // console.log('width: ' + square1.theHeight);
 
         // drawSquare(); 
         }
