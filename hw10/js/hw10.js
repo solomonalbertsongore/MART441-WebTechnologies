@@ -121,7 +121,6 @@ function getKey(event)
     if(actualLetter == "w")
         {
             moveUp();
-            console.log('w was pressed'); 
         }
     else if(actualLetter == "s")
         {
@@ -182,18 +181,26 @@ function edgeCheck()
 {
     if(square1.x >= 600)
     {
-        console.log('out of bounds x'); 
+        // console.log('out of bounds x'); 
+        square1.setX(square1.theX = 585); 
+        drawSquare(); 
     }
     if(square1.y >= 600)
     {
-        console.log('out of bounds y'); 
+        // console.log('out of bounds y'); 
+        square1.setY(square1.theY = 585); 
+        drawSquare(); 
     }
     if(square1.x <= 0)
     {
-        console.log('out of bounds x'); 
+        // console.log('out of bounds x'); 
+        square1.setX(square1.theX = 0); 
+        drawSquare(); 
     }
     if(square1.y <= 0)
     {
-        console.log('out of bounds y'); 
+        // console.log('out of bounds y'); 
+        square1.setY(square1.theY = 0); 
+        drawSquare(); 
     }
 }
