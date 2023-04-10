@@ -99,11 +99,11 @@ function getKey(event)
         // window.alert("ouch!");
         // console.log('my color is: ' + randomColor);
         $('#myCanvas').css('background-color', randomColor);
-        square1.setHeight(square1.theHeight + 3); 
-        square1.setWidth(square1.theWidth + 3); 
-        square2.setHeight(square2.theHeight - 3)
-        square2.setWidth(square2.theWidth - 3); 
-        drawSquare(); 
+        square1.setHeight(square1.theHeight + 20); 
+        square1.setWidth(square1.theWidth + 20); 
+        square2.setHeight(square2.theHeight - 20);
+        square2.setWidth(square2.theWidth - 20); 
+        // drawSquare(); 
         }
         var char = event.which || event.keyCode;
         var actualLetter = String.fromCharCode(char);
