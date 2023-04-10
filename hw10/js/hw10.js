@@ -58,18 +58,23 @@ var x2 = 100;
 var y2 = 100;
 var square1;
 var square2;
+createSquares(); 
 drawSquare();
 var colorArray = ['black', 'red', 'blue', 'white', 'grey'];
 var randomColor; 
 
+function createSquares()
+{
+    square1 = new Square(x,y,15,15,"pink");
+    square2 = new Square(x2,y2,100,100,"yellow");
+}
+
 function drawSquare()
 {
   ctx.clearRect(0,0,800,600);
-  square1 = new Square(x,y,15,15,"pink");
   ctx.fillStyle = square1.theColor;
   ctx.fillRect(square1.theX, square1.theY, square1.theWidth, square1.theHeight);
-
-  square2 = new Square(x2,y2,100,100,"yellow");
+  // ITS BECAUSE DRAW SQUARE KEEPS GETTING CALLED AND THESE ARE SET VALUES
   ctx.fillStyle = square2.theColor;
   ctx.fillRect(square2.theX, square2.theY, square2.theWidth, square2.theHeight); 
 }
@@ -102,10 +107,10 @@ function getKey(event)
 
         // for some reason these values aren't being passed back 
         // through. So none of this updates -- I have zero clue why. 
-        square1.setWidth(square1.theWidth + 20); 
-        square1.setHeight(square1.theHeight + 20); 
-        square2.setWidth(square2.theWidth - 20); 
-        square2.setHeight(square2.theHeight - 20);
+        square1.setWidth(square1.theWidth + 10); 
+        square1.setHeight(square1.theHeight + 10); 
+        square2.setWidth(square2.theWidth - 10); 
+        square2.setHeight(square2.theHeight - 10);
 
         console.log('height: ' + square1.theHeight);
         console.log('width: ' + square1.theHeight);
@@ -117,6 +122,7 @@ function getKey(event)
     if(actualLetter == "w")
         {
             moveUp();
+            console.log('w was pressed'); 
         }
     else if(actualLetter == "s")
         {
@@ -138,26 +144,30 @@ function getKey(event)
 
 function moveUp()
 {
-    y-=10;
+    // y-=10;
+    square1.setY(square1.theY - 10);
 }
 
 function moveDown()
 {
-    y+=10;
+    // y+=10;
+    square1.setY(square1.theY + 10);
 }
 function moveLeft()
 {
-    x-=10;
+    // x-=10;
+    square1.setX(square1.theX - 10);
 }
 function moveRight()
 {
-    x+=10;
+    // x+=10;
+    square1.setX(square1.theX + 10);
 }
 
 function moveAround()
 {
-    y2 = Math.random() * (550 - 10) + 10;; 
-    x2 = Math.random() * (550 - 10) + 10;; 
+    square2.setY(square2.theY = Math.random() * (550 -10));
+    square2.setX(square2.theX = Math.random() * (550 -10));
 }
 
 function hasCollided(object1, object2) {
