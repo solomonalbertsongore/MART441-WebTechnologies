@@ -99,10 +99,17 @@ function getKey(event)
         // window.alert("ouch!");
         // console.log('my color is: ' + randomColor);
         $('#myCanvas').css('background-color', randomColor);
-        square1.setHeight(square1.theHeight + 20); 
+
+        // for some reason these values aren't being passed back 
+        // through. So none of this updates -- I have zero clue why. 
         square1.setWidth(square1.theWidth + 20); 
-        square2.setHeight(square2.theHeight - 20);
+        square1.setHeight(square1.theHeight + 20); 
         square2.setWidth(square2.theWidth - 20); 
+        square2.setHeight(square2.theHeight - 20);
+
+        console.log('height: ' + square1.theHeight);
+        console.log('width: ' + square1.theHeight);
+
         // drawSquare(); 
         }
         var char = event.which || event.keyCode;
@@ -124,8 +131,9 @@ function getKey(event)
             moveLeft();
         }
     
-    drawSquare();
     edgeCheck(); 
+    drawSquare();
+
 }
 
 function moveUp()
