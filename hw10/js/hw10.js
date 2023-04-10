@@ -99,10 +99,10 @@ function getKey(event)
         // window.alert("ouch!");
         // console.log('my color is: ' + randomColor);
         $('#myCanvas').css('background-color', randomColor);
-        square1.setHeight(Math.random() * 100); 
-        square1.setWidth(Math.random() * 100); 
-        square2.setHeight(Math.random() * 100)
-        square2.setWidth(Math.random() * 100); 
+        square1.setHeight(square1.theHeight + 3); 
+        square1.setWidth(square1.theWidth + 3); 
+        square2.setHeight(square2.theHeight - 3)
+        square2.setWidth(square2.theWidth - 3); 
         drawSquare(); 
         }
         var char = event.which || event.keyCode;
@@ -125,6 +125,7 @@ function getKey(event)
         }
     
     drawSquare();
+    edgeCheck(); 
 }
 
 function moveUp()
@@ -158,4 +159,24 @@ function hasCollided(object1, object2) {
         ((object1.x + object1.width) < object2.x) ||
         (object1.x > (object2.x + object2.width))
     );
+}
+
+function edgeCheck()
+{
+    if(square1.x >= 600)
+    {
+        console.log('out of bounds x'); 
+    }
+    if(square1.y >= 600)
+    {
+        console.log('out of bounds y'); 
+    }
+    if(square1.x <= 0)
+    {
+        console.log('out of bounds x'); 
+    }
+    if(square1.y <= 0)
+    {
+        console.log('out of bounds y'); 
+    }
 }
