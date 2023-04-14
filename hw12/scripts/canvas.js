@@ -26,9 +26,9 @@ function setup()
     ctx = canvas.getContext("2d");
 
     // create two objects
-    square1 = new Square(100,100,50,50,"#0000FF");
-    square2 = new Square(400,400,100,100,"#00FF00");
-    square3 = new Square(250,250,100,100,"#00FF00");
+    square1 = new Square(100,100,25,25,"#00FFFF");
+    square2 = new Square(300,300,200,200,"#FF0000");
+    square3 = new Square(1000,1000,100,100,"white");
 
     $.getJSON("data/5objs.json", function(data) {
         for(var i = 0; i < data.squares.length; i++)
@@ -85,7 +85,6 @@ function getKey(event)
         {
             break;
         }
-        
         //console.log(test2);
     }
     for(var i = 0; i < collectables.length; i++)
@@ -94,9 +93,9 @@ function getKey(event)
         test4 = hasCollided(square1,collectables[i]);
         if(test4 == true)
         {
-            console.log('hit!'); 
+            // console.log('hit!'); 
             collectables.splice(i, 1); 
-            console.log(collectables.length);
+            // console.log(collectables.length);
             items++; 
             break;
         }
@@ -170,8 +169,7 @@ function drawSquare()
     }
 
     ctx.font = "30px Arial";
-    ctx.fillText("Items: " + items, 10, 50);    
-
+    ctx.fillText("Items: " + items, 10, 50);   
 }
 
 function hasCollided(object1, object2) {
