@@ -53,6 +53,7 @@ function preload ()
     this.load.image('star', 'assets/star.png');
     this.load.image('bomb', 'assets/bomb.png');
     this.load.image('shinyball', 'assets/shinyball.png');
+    this.load.image('spikedball', 'assets/spikedball.png');
     this.load.image('player', 'assets/alienbusters.png');
     this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
 }
@@ -75,6 +76,13 @@ function create ()
     platforms.create(100, 250, 'ground');
     platforms.create(950, 100, 'ground');
     platforms.create(850, 250, 'ground');
+
+    spikes = this.physics.add.staticGroup( {
+        key: 'spike'
+    }); 
+
+    spikes.create(250, 568, 'spikedball'); 
+    
 
 
     // The player and its settings
@@ -152,11 +160,14 @@ function create ()
     this.physics.add.collider(stars, platforms);
     this.physics.add.collider(bombs, platforms);
     this.physics.add.collider(shinyballs, platforms); 
+    // this.physics.add.collider(player, spikes); 
 
     //  Checks to see if the player overlaps with any of the stars if he does call the collectStar function
     this.physics.add.overlap(player, stars, collectStar, null, this);
     this.physics.add.overlap(player, shinyballs, collectShinyBall, null, this);
     this.physics.add.collider(player, bombs, hitBomb, null, this);
+    this.physics.add.collider(player, spikes, hitSpike, null, this);
+
 }
 
 function update ()
@@ -250,6 +261,18 @@ function hitBomb (player, bomb)
     gameOver = true;
 }
 
+function hitSpike (player, spikes) 
+ {
+    this.physics.pause();
+
+    player.setTint(0xff0000);
+
+    // player.anims.play('turn');
+
+    gameOver = true;
+
+    console.log('hit spike'); 
+}
 </script>
 
 </body>
