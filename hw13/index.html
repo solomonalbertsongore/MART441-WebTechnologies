@@ -104,13 +104,15 @@ function create ()
     stars = this.physics.add.group({
         key: 'star',
         repeat: 11,
-        setXY: { x: 12, y: 0, stepX: 70 }
+        setXY: { x: 12, y: 0, stepX: 70 },
+
     });
 
     stars.children.iterate(function (child) {
 
         //  Give each star a slightly different bounce
         child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+        // child.setVelocityY(1000); 
 
     });
 
