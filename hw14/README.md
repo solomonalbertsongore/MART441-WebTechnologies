@@ -1,0 +1,3 @@
+This weeks homework was quite challenging! I had a lot of issues with three.js when it came to the obj loader and such. I ended up having to go back and use the example files, because that was the only way I could get the models to show. Before that though, I tried to troubleshoot my best on Google. Overall though, cool week and I'm glad to know tools like this are out there. I could see this being really powerful for a 3D artist porfolio website. 
+
+By the way, the alien model is not mine, however the sword model is. Just wanted to get two in. 
