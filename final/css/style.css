@@ -102,6 +102,12 @@ body
     */
   }
 
+  hr.solidBlack
+  {
+    border-top: 2px solid black;
+    width: 50%;
+  }
+
   .closeIcon {
     display: none;
   }
