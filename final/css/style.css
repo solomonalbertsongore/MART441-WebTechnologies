@@ -22,6 +22,15 @@ body
     */
 }
 
+#background
+{
+  background: linear-gradient(-45deg, #565656, #9e9e9e, #fba92c);
+  background-size: 800% 800%;
+  width: 100%;
+  height: 100%;
+  animation: gradient 12s linear infinite; 
+}
+
 .mobile-container {
     max-width: 480px;
     margin: auto;
@@ -32,9 +41,18 @@ body
   }
   
   .topnav {
+    /*
     overflow: hidden;
     background-color: black;
     position: relative;
+    */
+  }
+
+  #myLinks {
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+    text-align: center;
   }
   
   .topnav #myLinks {
@@ -63,8 +81,10 @@ body
   }
   
   .active {
-    background-color: #565656;
+    /*
+    background-color: #565656; 
     color: black;
+    */
   }
 
   .hamburger {
@@ -85,4 +105,16 @@ body
 
   .closeIcon {
     display: none;
+  }
+
+  @keyframes gradient{
+    0%{
+      background-position: 0 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0 50%;
+    }
   }
