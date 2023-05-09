@@ -1,6 +1,6 @@
 var closeIcon = document.getElementById("closeIcon"); 
 var menuIcon = document.getElementById("menuIcon"); 
-
+var x = document.getElementById("myLinks");
 
 function myFunction() {
     var x = document.getElementById("myLinks");
@@ -15,4 +15,13 @@ function myFunction() {
     }
   }
 
+
 closeIcon.style.display = "none"; 
+
+/*
+$("#hamburger").click(function(){
+  $("#myLinks").fadeIn();
+  // $("#div2").fadeIn("slow");
+  // $("#div3").fadeIn(3000);
+});
+*/
