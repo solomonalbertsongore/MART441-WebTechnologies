@@ -15,6 +15,7 @@ White: #FFFFFF
 body
 {
     margin: 0;
+    font-family: anonRegular;
     /*
     border-style: solid;
     border-width: 2px;
@@ -128,4 +129,10 @@ body
     float: right; 
     padding: 50px;
 
+  }
+
+  .center
+  {
+    text-align: center;
+    padding: 20px
   }
