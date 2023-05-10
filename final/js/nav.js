@@ -9,7 +9,7 @@ function myFunction() {
       // jQuery for fancy hamburger navigation
       $("#myLinks").fadeOut(function ()
       {
-        console.log('animation complete'); 
+        // console.log('animation complete'); 
         x.style.display = "none"; 
         // $("#myLinks").style("display", "none"); 
       });
@@ -24,6 +24,10 @@ function myFunction() {
     }
   }
 
+function scrollToTop()
+{
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
 
 closeIcon.style.display = "none"; 
 x.style.display = "none"; 

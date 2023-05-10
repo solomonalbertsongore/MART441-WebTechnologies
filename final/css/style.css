@@ -105,8 +105,7 @@ body
     right: 10px;
     background-color: #fba92c;
     /*
-    z-index: 100;
-    top: 1rem;
+
     right: 1rem;
     padding: 4px;
     border: black solid 1px;
@@ -149,6 +148,28 @@ body
     text-align: center;
   }
 
+  #aboutMeTxt
+  {
+    font-size: 20px;
+  }
+
+  li
+  {
+    font-size: 17px;
+  }
+
+  img 
+  {
+    width: 275px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+  }
+
+
+  /* ANIMATIONS */ 
   @keyframes gradient{
     0%{
       background-position: 0 50%;
