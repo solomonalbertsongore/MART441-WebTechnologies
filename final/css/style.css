@@ -191,6 +191,21 @@ body
     text-align: center;
   }
 
+  .galleryImg
+  {
+    width: 250px;
+    padding: 5px;
+  }
+
+  .responsiveContainer {
+    margin: auto; 
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    justify-content: center;
+  }
+
+
   /* ANIMATIONS */ 
   @keyframes gradient{
     0%{
