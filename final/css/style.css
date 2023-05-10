@@ -230,3 +230,103 @@ body
     from {opacity: 0;}
     to {opacity: 1;}
   }
+
+  /* RESPONSIVENESS */ 
+  @media screen and (min-width: 800px)
+  {
+    h1
+    {
+      font-size: 50px;
+    }
+
+    hr.solidBlack 
+    {
+      width: 75%;
+    }
+
+    .hamburger
+    {
+      padding: 20px; 
+    }
+
+    #myLinks a 
+    {
+      font-size: 30px;
+    }
+
+    .material-icons 
+    {
+      font-size: 48px; 
+    }
+
+    #aboutMeTxt
+    {
+      font-size: 27px;
+    }
+
+    li 
+    {
+      font-size: 25px;
+    }
+
+    #abtMeImg
+    {
+      width: 400px;
+      height: auto;
+    }
+
+    .webScreenshots
+    {
+      width: 600px;
+      height: auto;
+    }
+
+    label 
+    {
+      font-size: 27px;
+    }
+
+    .galleryImg 
+    {
+      width: 600px;
+    }
+  }
+
+  @media screen and (min-width: 1000px){
+
+    h1 
+    {
+      font-size: 70px
+    }
+    
+    #myLinks a 
+    {
+      font-size: 45px;
+    }
+
+    .mainContent
+    {
+      width: 70%;
+    }
+
+    .galleryImg 
+    {
+      width: 700px;
+    }
+
+    #aboutMeTxt
+    {
+      font-size: 35px;
+    }
+
+    li 
+    {
+      font-size: 30px;
+    }
+
+    .webScreenshots
+    {
+      width: 800px;
+      height: auto;
+    }
+  }
