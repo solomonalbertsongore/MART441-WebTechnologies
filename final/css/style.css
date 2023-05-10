@@ -14,18 +14,26 @@ White: #FFFFFF
 
 html
 {
+  /*
   animation: fadeInAnimation 2s; 
+  */
 }
 
 body
 {
-    margin: 0;
+    margin: auto;
     font-family: anonRegular;
     /*
     border-style: solid;
     border-width: 2px;
     border-color: red;
     */
+}
+
+.mainContent
+{
+  width: 90%;
+  margin: auto;
 }
 
 #background
@@ -130,12 +138,16 @@ body
 
   }
 
-  .center
+  .centerWPadding
   {
     text-align: center;
     padding: 20px
   }
 
+  .center
+  {
+    text-align: center;
+  }
 
   @keyframes gradient{
     0%{
