@@ -168,6 +168,28 @@ body
     padding-top: 20px;
   }
 
+  iframe
+  {
+    border-style: solid;
+    width: 100%;
+  }
+
+  .iframeContainer
+  {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  .webScreenshots
+  {
+    padding-bottom: 20px;
+  }
+
+  label
+  {
+    font-size: 17px;
+    text-align: center;
+  }
 
   /* ANIMATIONS */ 
   @keyframes gradient{
